@@ -14,7 +14,7 @@ private:
                         return root;
                 }
                 ListNode *mid=head, *temp=head;
-                while(temp!=tail &&temp->next!=tail){  //search for the mid node
+                while(temp!=tail &&temp->next!=tail){  //*****search for the mid node
                         mid = mid->next;
                         temp = temp->next->next;
                 }

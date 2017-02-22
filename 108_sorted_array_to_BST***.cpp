@@ -1,3 +1,6 @@
+// define two new parameters: start, end
+// DP root->left and root->right
+
 class Solution {
 public:
         TreeNode* sortedArrayToBST(vector<int>& nums) {
