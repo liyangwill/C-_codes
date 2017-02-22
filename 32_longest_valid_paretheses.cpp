@@ -1,5 +1,6 @@
 /**
- *  Use of stack .pop .push .top .empty
+ *  Use of stack 
+ *  .pop .push .top .empty
  */
 
 class Solution {
