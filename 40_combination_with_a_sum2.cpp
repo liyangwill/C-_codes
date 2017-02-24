@@ -21,7 +21,8 @@ private:
                 for (int i = begin; i != candidates.size() && target >= candidates[i]; ++i)
                         if (i == begin || candidates[i] != candidates[i-1]){ //skip same fisrt int
                                 combination.push_back(candidates[i]);
-                                combinationSum2(candidates, target - candidates[i], res, combination, i+1); // i+1 avoid using multiple times
+                                //i+1 avoid using multiple times
+                                combinationSum2(candidates, target-candidates[i], res, combination, i+1);
                                 combination.pop_back();
                         }
         }

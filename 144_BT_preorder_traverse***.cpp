@@ -8,24 +8,25 @@ class Solution {
 public:
         vector<int> preorderTraversal(TreeNode *root) {
                 if (root==NULL) {
-                        return vector<int>(); //define a null vector of int
+                        return vector<int>();
                 }
-                vector<int> result;
-                stack<TreeNode *> treeStack;  
-                treeStack.push(root);
-                while (!treeStack.empty()) {
-                        TreeNode *temp = treeStack.top();
+                vector<int> res;
+                stack<TreeNode*> stack;
+                stack.push(root);
+            
+                while (!stack.empty()) {
+                        TreeNode* temp = stack.top();
                         
-                        result.push_back(temp->val); // push_back to result vector
+                        res.push_back(temp->val);
                         
-                        treeStack.pop();
+                        stack.pop();
                         if (temp->right) {
-                                treeStack.push(temp->right);
+                                stack.push(temp->right);
                         }
                         if (temp->left) {
-                                treeStack.push(temp->left);
+                                stack.push(temp->left);
                         }
                 }
-                return result;
+                return res;
         }
 };

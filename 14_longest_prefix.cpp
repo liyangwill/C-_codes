@@ -1,5 +1,7 @@
 /**
  * & strs: reference used in function argument
+ *
+ * brute force traverse
  * 
  */
 class Solution {
@@ -10,6 +12,6 @@ public:
                         for(int i=0; i<strs.size(); i++)
                                 if(idx >= strs[i].size() ||(i > 0 && strs[i][idx] != strs[i-1][idx]))
                                         return prefix;
-                                return prefix;
+                return prefix;
         }
 };

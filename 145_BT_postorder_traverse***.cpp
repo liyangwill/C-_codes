@@ -1,5 +1,5 @@
 /**
- * postorder reverse(root->rigth->left)  left->right->right
+ * postorder reverse(root->rigth->left)  left->right->root
  * 
  * use stack, stack.pop(), stack.top()
  * 
@@ -8,26 +8,25 @@ class Solution {
 public:
         vector<int> preorderTraversal(TreeNode *root) {
                 if (root==NULL) {
-                        return vector<int>(); //define a null vector of int
+                        return vector<int>();
                 }
-                vector<int> result;
-                stack<TreeNode *> treeStack;  
-                treeStack.push(root);
+                vector<int> res;
+                stack<TreeNode *> stack;
+                stack.push(root);
                 
-                while (!treeStack.empty()) {
-                        TreeNode *temp = treeStack.top();
+                while (!stack.empty()) {
+                        TreeNode *temp = stack.top();
                         
-                        result.push_back(temp->val); // push_back to result vector
-                        
-                        treeStack.pop();
+                        res.push_back(temp->val);
+                        stack.pop();
                         if (temp->left) {
-                                treeStack.push(temp->left);
+                                stack.push(temp->left);
                         }
                         if (temp->right) {
-                                treeStack.push(temp->right);
+                                stack.push(temp->right);
                         }
                 }
-                reverse(result.begin(),result.end());
-                return result;
+                reverse(res.begin(),result.end());
+                return res;
         }
 };

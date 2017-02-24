@@ -1,0 +1,16 @@
+A hash table is a data structure for storing key-value pairs. Unlike a basic array, which uses index numbers for accessing elements, a hash table uses keys to look up table entries. This makes data management more manageable for the human user since it’s easier to catalog data entries by their attributes rather than their count in a giant list.
+
+In C++, we implement a hash table as an array of linked lists. It’s sort of like a multidimensional array. In a two-dimensional array, for instance, the elements consist of rows of a fixed length. In a hash table, however, the elements (a.k.a. buckets) can expand or shrink to accommodate a virtually infinite number of table entries.
+
+In terms of efficiency, a hash table is a compromise between an array and a linked list. It uses both indexing and list traversal to store and retrieve data elements.
+
+Looking up elements by index makes an array very efficient. No matter where an item is stored in the array, it always takes the same amount of time to retrieve it. In technical terms, getting an item from an array is an O(1) or “constant time” operation.
+
+Looking up elements in a linked list is a lot less efficient. You can’t just directly access any node in the list. Instead, you have to traverse down the list until you find the target item. If the item you are looking for happens to be at the front of the list, the retrieval is an O(1) operation since you only traversed down one node. If the item is at the end of the list, retrieving it would be an O(n) operation, where n is the total number of nodes in the list.
+
+To summarize, as the number of elements increases in an array, the runtime to access an element by its index remains constant. With a linked list, the time it takes to access a particular element increases linearly with the number of elements.
+
+A hash function decides where to store and retrieve items in a hash table. It takes in an item key as its parameter and returns an index location for that particular item. Generally, a hash function uses modulo arithmetic. In particular, a key value is divided by the table length to generate an index number in the table. This index number refers to a location, or bucket, in the hash table.
+
+
+Here’s an example: Suppose the hash function takes in a string as its parameter, and then it adds up the ASCII values of all of the characters in that string to get an integer. If the key is “pumpkin,” then the sum of the ASCII values would be 772. After that, the hash function takes the modulus of this number by the table length to get an index number. If the table length is 13, then 772 modulo 13 is 5. So the item with the key “pumpkin,” would go into bucket # 5 in the hash table.

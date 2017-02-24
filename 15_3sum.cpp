@@ -1,3 +1,9 @@
+// sort the array
+// sequentially take a number as the first item, and look for the rest two in the right group.
+// two pointers from left and right to middle.
+
+// Optimize by avoiding duplicates.
+
 class Solution {
 public:
         vector<vector<int>> threeSum(vector<int>& num) {

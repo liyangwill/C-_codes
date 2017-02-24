@@ -1,29 +1,14 @@
-/**
- * inorder left->root->right
- * Use stack
- */
 class Solution {
 public:
-        vector<int> inorderTraversal(TreeNode *root) {
-                vector<int> vector; 
-                stack<TreeNode *> stack;  
-                TreeNode *pCurrent = root;
-                
-                while(!stack.empty() || pCurrent)
-                {
-                        if(pCurrent)  // keep pushing left node into stack
-                        {
-                                stack.push(pCurrent);
-                                pCurrent = pCurrent->left;
-                        }
-                        else 
-                        {
-                                TreeNode *pNode = stack.top(); 
-                                vector.push_back(pNode->val);
-                                stack.pop();
-                                pCurrent = pNode->right;
-                        }
-                }
-                return vector;
+    int maxSubArray(vector<int>& nums) {
+        int ans = nums[0], sum = 0;
+        for(int i = 0; i != nums.size(); ++i){
+            sum += nums[i];
+            ans = max(sum, ans);
+            // sum = 0 means to ignore subarray before
+            sum = max(sum, 0);
         }
+        return ans;
+    }
+    
 };

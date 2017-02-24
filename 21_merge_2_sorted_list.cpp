@@ -1,12 +1,13 @@
 /**
  *  ListNode and pointer
- *  dummy.next 
+ *  dummy.next
+ *  dummy is a ListNode
  */
 class Solution {
 public:
         ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
                 ListNode dummy(0);
-                ListNode *tail = &dummy;
+                ListNode* tail = &dummy;
                 
                 while(l1&&l2){
                         if(l1->val < l2->val){

@@ -1,4 +1,8 @@
 /**
+ * Create a hash talble that stores the letter-value pairs.
+ *
+ * travers from the back, s[i] < s[i+1] deduction, s[i] > s[i+1] add to the sum.
+ *
  * unordered_map T[char] = int; str.length; str.back;
  * 
  */

@@ -9,6 +9,7 @@ public:
                 int n = nums.size();
                 int lo = 0, hi = n-1;
                 vector<int> ret(2,-1);
+            
                 //standard binary search (biased to the left)
                 while(lo < hi){
                         int mid = (lo + hi)/2;
