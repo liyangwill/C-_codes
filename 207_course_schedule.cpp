@@ -12,6 +12,7 @@ public:
             
             //no course can be taken (when degree != 0)
             if (j == numCourses) return false;
+            
             degrees[j] = -1; //degreen = -1 for taken courses
             
             //after taking a course, deduct from other course degree.

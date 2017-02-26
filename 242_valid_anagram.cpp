@@ -1,3 +1,9 @@
+// s = "anagram", t = "nagaram", return true.
+// s = "rat", t = "car", return false.
+
+// hash table stores number of appearance of each char, ++ for s, -- for t.
+// hash.first, hash.second;
+
 class Solution {
 public:
     bool isAnagram(string s, string t){
@@ -8,6 +14,7 @@ public:
             counts[s[i]]++;
             counts[t[i]]--;
         }
+        // traverse a hash table
         for (auto count:counts) {
             if (count.second) {
                 return false;
@@ -17,7 +24,8 @@ public:
     }
 };
 
-//only lowercase
+// only lowercase
+// use a vector instead of a hash table, index:char, index = s[i]-'a';
 
 class Solution {
 public:

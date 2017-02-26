@@ -1,10 +1,12 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
+        
         ListNode* new_head = new ListNode(0);
         new_head -> next = head;
         ListNode* pre = new_head;
         ListNode* cur = head;
+        
         while (cur && cur -> next) {
             ListNode* temp = pre -> next;
             pre -> next = cur -> next;
@@ -15,13 +17,15 @@ public:
     }
 };
 
-class Solution {
+class Solution2 {
 public:
     ListNode* reverseList(ListNode* head) {
+        
         ListNode* pre = new ListNode(0);
         pre -> next = head;
-        //       ListNode* pre = new_head;
+        // ListNode* pre = new_head;
         ListNode* cur = head;
+        
         while (cur && cur -> next) {
             ListNode* temp = pre -> next;
             pre -> next = cur -> next;

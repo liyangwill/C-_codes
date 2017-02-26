@@ -30,5 +30,6 @@ public:
             pre=head;
             head=next;
         }
+        return pre;
     }
 }

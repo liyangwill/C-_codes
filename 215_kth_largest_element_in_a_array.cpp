@@ -1,10 +1,9 @@
-
-//quick sort
-//Initialize left to be 0 and right to be nums.size() - 1;
-//Partition the array, if the pivot is at the k-1-th position, return it (we are done);
-//If the pivot is right to the k-1-th position, update right to be the left neighbor of the pivot;
-//Else update left to be the right neighbor of the pivot.
-//Repeat 2.
+// quick sort
+// 1. Initialize left to be 0 and right to be nums.size() - 1;
+// 2. Partition the array, if the pivot is at the k-1-th position, return it (we are done);
+// 3. If the pivot is right to the k-1-th position, update right to be the left neighbor of the pivot;
+// 4. Else update left to be the right neighbor of the pivot.
+// 5. Repeat 2.
 
 class Solution {
 public:

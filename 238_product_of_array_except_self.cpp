@@ -1,3 +1,5 @@
+// O(n) time using two vector
+
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {

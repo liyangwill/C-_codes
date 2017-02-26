@@ -1,9 +1,11 @@
-// unordered _set
+// ordered _set
 // The basic idea is to maintain a set s
 // which contain unique values from nums[i - k] to nums[i - 1],
 // if nums[i] is in set s then return true else update the set.
 
-#include<unordered_set>
+// two distinct indices i and j in the array such that the absolute difference between nums[i] and nums[j] is at most t and the absolute difference between i and j is at most k.
+
+// #include<unordered_set>
 
 class Solution {
 public:

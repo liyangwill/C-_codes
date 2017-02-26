@@ -1,3 +1,4 @@
+// two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
 // unordered _set
 // The basic idea is to maintain a set s
 // which contain unique values from nums[i - k] to nums[i - 1],
@@ -16,12 +17,11 @@ public:
         
         for (int i = 0; i < nums.size(); i++)
         {
+            s.insert(nums[i]);
             if (i > k) s.erase(nums[i - k - 1]);
             //.find returns .end if not find 
             if (s.find(nums[i]) != s.end()) return true;
-            s.insert(nums[i]);
         }
-        
         return false;
     }
 };

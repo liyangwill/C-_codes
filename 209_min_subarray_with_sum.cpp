@@ -10,6 +10,7 @@ public:
         for (int i=0; i<n; i++) {
             sum+=nums[i];
             while (sum>=s) {
+                // key boolean
                 minlen=min(minlen, i-start+1);
                 sum-=nums[start++];
             }

@@ -1,5 +1,8 @@
 //longest substr without repeated letters
+
 //create a dict storing index of last appearance
+
+//256 ASCII
 
 class Solution {
 public:
@@ -10,6 +13,8 @@ public:
                 for(int i=0; i<s.length();i++){
                         if(dict[s[i]] > start)
                                 start = dict[s[i]];
+                    
+                        // update char's last appearance index
                         dict[s[i]]=i;
                         maxLen = max(maxLen, i-start);
                 }
@@ -17,11 +22,5 @@ public:
         }
 };
 
+//
 
-for (int i=0; i<s.length(); i++){
-    if(dict[s[i]]>start){
-        start = dict[s[i]];
-    }
-    dict[s[i]] = i;
-    maxLen = max(maxLen, i-start);
-}
